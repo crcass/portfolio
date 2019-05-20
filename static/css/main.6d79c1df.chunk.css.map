@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,kBAAmB,CACnB,UAAW,CACX,gCACF,CAEA,EACE,iBACF","file":"main.6d79c1df.chunk.css","sourcesContent":["body {\n  background: #f8f8f8;\n  color: #222;\n  font-family: 'Questrial', sans-serif;\n}\n\np {\n  line-height: 1.4em;\n}\n"]}
