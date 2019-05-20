@@ -1,18 +1,18 @@
 import portfolio from './images/portfolio.jpg';
-import gbSearch from './images/gbSearch.png';
-import eplMemory from './images/eplMemory.png';
+import gbSearch from './images/gbSearch.jpg';
+import eplMemory from './images/eplMemory.jpg';
 import vNews from './images/vNews.png';
-import link from './images/link.png';
+import link from './images/link.jpg';
 // import edb from './images/edb.png';
-import bamazon from './images/bamazon.png';
-import hailCLI from './images/hailCLI.png';
-import liri from './images/liri.png';
-import signal from './images/signal.png';
-import rps from './images/rps.png';
-import supersearch from './images/supersearch.png';
-import trivia from './images/trivia.png';
-import starfighter from './images/starfighter.png';
-import hail from './images/hail.png';
+import bamazon from './images/bamazon.jpg';
+import hailCLI from './images/hailCLI.jpg';
+import liri from './images/liri.jpg';
+import signal from './images/signal.jpg';
+import rps from './images/rps.jpg';
+import supersearch from './images/supersearch.jpg';
+import trivia from './images/trivia.jpg';
+import starfighter from './images/starfighter.jpg';
+import hail from './images/hail.jpg';
 
 const projects = [
   {
