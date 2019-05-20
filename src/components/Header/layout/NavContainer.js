@@ -45,6 +45,7 @@ const NavContainer = styled.div`
   }
 
   a {
+    color: inherit;
     text-decoration: none;
 
     &:visited {

@@ -17,7 +17,7 @@ const App = () => (
     <Center>
       <SiteContainer>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/portfolio/" component={Home} />
           <Route exact path="/projects/" component={Projects} />
           <Route exact path="/projects/:route" component={ProjectPage} />
           <Route exact path="/profile/" component={Profile} />

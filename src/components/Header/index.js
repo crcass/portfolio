@@ -14,7 +14,7 @@ const Header = ({ location }) => {
       <HeaderContainer>
         <NavContainer>
           <h1>
-            <Link to="/">CC</Link>
+            <Link to="/portfolio/">CC</Link>
           </h1>
         </NavContainer>
         <NavContainer>
