@@ -44,15 +44,6 @@ const projects = [
     route: 'v-news'
   },
   {
-    title: 'EDB Express',
-    tech: 'MySQL, Handlebars.js, Express.js, Node.js, SCSS',
-    description: `Edb Express is a simple to-do list that allows users to input a type of burger they would like to eat, save it to the database, and update the database once they have received their order.`,
-    image: edb,
-    liveUrl: 'https://morning-shelf-39455.herokuapp.com/',
-    githubUrl: 'https://github.com/crcass/burger',
-    route: 'edb-express'
-  },
-  {
     title: 'Link',
     tech: 'Express.js, Node.js, Axios, SCSS',
     description: `Users input their name, add a photo, and answer a series of questions. Link matches the user against everyone else in the system and displays their new best friend.`,
@@ -61,6 +52,15 @@ const projects = [
     githubUrl: 'https://github.com/crcass/friendfinder',
     route: 'link',
     featured: true
+  },
+  {
+    title: 'EDB Express',
+    tech: 'MySQL, Handlebars.js, Express.js, Node.js, SCSS',
+    description: `Edb Express is a simple to-do list that allows users to input a type of burger they would like to eat, save it to the database, and update the database once they have received their order.`,
+    image: edb,
+    liveUrl: 'https://morning-shelf-39455.herokuapp.com/',
+    githubUrl: 'https://github.com/crcass/burger',
+    route: 'edb-express'
   },
   {
     title: 'Bamazon',
