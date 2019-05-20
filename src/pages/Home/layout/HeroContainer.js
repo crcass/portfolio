@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const HeroContainer = styled.article`
-  margin: 0 1.1em;
+  margin-left: 1.2em;
   padding-bottom: 2.2em;
-  width: 100%;
+  width: 97%;
 `;
 
 export default HeroContainer;

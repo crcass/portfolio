@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import TextContainer from '../../shared/TextContainer';
 import DetailsWrap from '../../shared/DetailsWrap';
 import Details from '../../shared/Details';
@@ -8,7 +8,7 @@ import Image from '../../shared/Image';
 import profile from './profile.jpg';
 
 const Contact = () => (
-  <Fragment>
+  <main>
     <TextContainer>
       <DetailsWrap>
         <Details>
@@ -58,7 +58,7 @@ const Contact = () => (
         </ContactInfo>
       </DetailsWrap>
     </TextContainer>
-  </Fragment>
+  </main>
 );
 
 export default Contact;

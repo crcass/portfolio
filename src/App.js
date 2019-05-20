@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Header from './components/Header';
 import Center from './components/Center';
-import SiteContainer from './components/SiteContainer';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -13,21 +13,37 @@ import NotFound from './pages/NotFound';
 
 const App = () => (
   <Router>
-    <Header />
-    <Center>
-      <SiteContainer>
-        <Switch>
-          <Route exact path="/portfolio/" component={Home} />
-          <Route exact path="/portfolio/:route" component={ProjectPage} />
-          <Route exact path="/projects/" component={Projects} />
-          <Route exact path="/projects/:route" component={ProjectPage} />
-          <Route exact path="/profile/" component={Profile} />
-          <Route exact path="/contact/" component={Contact} />
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
-      </SiteContainer>
-    </Center>
+    <Route
+      render={({ location }) => (
+        <Fragment>
+          <Header />
+          <Center>
+            <TransitionGroup className="site-container">
+              <CSSTransition key={location.key} timeout={500} classNames="page">
+                <Switch location={location}>
+                  <Route exact path="/portfolio/" component={Home} />
+                  <Route
+                    exact
+                    path="/portfolio/:route"
+                    component={ProjectPage}
+                  />
+                  <Route exact path="/projects/" component={Projects} />
+                  <Route
+                    exact
+                    path="/projects/:route"
+                    component={ProjectPage}
+                  />
+                  <Route exact path="/profile/" component={Profile} />
+                  <Route exact path="/contact/" component={Contact} />
+                  <Route component={NotFound} />
+                </Switch>
+              </CSSTransition>
+              <Footer />
+            </TransitionGroup>
+          </Center>
+        </Fragment>
+      )}
+    />
   </Router>
 );
 

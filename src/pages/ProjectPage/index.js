@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ProjectLayout from '../../components/ProjectLayout';
 import ProjectGrid from '../Projects/ProjectGrid';
 import Latest from '../../components/ProjectLayout/layout/Latest';
@@ -14,7 +14,7 @@ const renderProjectPage = (route, projects) =>
 const ProjectPage = props => {
   const { route } = props.match.params;
   return (
-    <Fragment>
+    <main>
       {renderProjectPage(route, projects)}
       <LatestTitle>
         <h3>Latest Projects</h3>
@@ -22,7 +22,7 @@ const ProjectPage = props => {
       <Latest>
         <ProjectGrid projects={latestProjects(projects)} />
       </Latest>
-    </Fragment>
+    </main>
   );
 };
 

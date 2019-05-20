@@ -1,8 +1,9 @@
+import portfolio from './images/portfolio.jpg';
 import gbSearch from './images/gbSearch.png';
 import eplMemory from './images/eplMemory.png';
 import vNews from './images/vNews.png';
-import edb from './images/edb.png';
 import link from './images/link.png';
+// import edb from './images/edb.png';
 import bamazon from './images/bamazon.png';
 import hailCLI from './images/hailCLI.png';
 import liri from './images/liri.png';
@@ -14,6 +15,15 @@ import starfighter from './images/starfighter.png';
 import hail from './images/hail.png';
 
 const projects = [
+  {
+    title: 'Portfolio',
+    tech: 'React, React Router, styled-components',
+    description: `I wanted this portfolio to be clean and easy to navigate while being simple to maintain and update. The content on the Home, Projects, and individual project pages are dynamically populated from a stored object.`,
+    image: portfolio,
+    liveUrl: 'https://crcass.github.io/portfolio',
+    githubUrl: 'https://github.com/crcass/portfolio',
+    route: 'portfolio'
+  },
   {
     title: 'Google Books Search',
     tech:
@@ -53,15 +63,15 @@ const projects = [
     route: 'link',
     featured: true
   },
-  {
-    title: 'EDB Express',
-    tech: 'MySQL, Handlebars.js, Express.js, Node.js, SCSS',
-    description: `Edb Express is a simple to-do list that allows users to input a type of burger they would like to eat, save it to the database, and update the database once they have received their order.`,
-    image: edb,
-    liveUrl: 'https://morning-shelf-39455.herokuapp.com/',
-    githubUrl: 'https://github.com/crcass/burger',
-    route: 'edb-express'
-  },
+  // {
+  //   title: 'EDB Express',
+  //   tech: 'MySQL, Handlebars.js, Express.js, Node.js, SCSS',
+  //   description: `Edb Express is a simple to-do list that allows users to input a type of burger they would like to eat, save it to the database, and update the database once they have received their order.`,
+  //   image: edb,
+  //   liveUrl: 'https://morning-shelf-39455.herokuapp.com/',
+  //   githubUrl: 'https://github.com/crcass/burger',
+  //   route: 'edb-express'
+  // },
   {
     title: 'Bamazon',
     tech: 'Node.js, MySQL, Inquirer, Chalk',

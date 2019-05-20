@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Thumbnail from '../../../components/Thumbnail';
 
 const renderThumbnails = projects =>
@@ -12,7 +12,7 @@ const renderThumbnails = projects =>
   ));
 
 const Layout = ({ projects }) => (
-  <Fragment>{renderThumbnails(projects)}</Fragment>
+  <section className="projects">{renderThumbnails(projects)}</section>
 );
 
 export default Layout;

@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import HeroWrap from './layout/HeroWrap';
 import HeroBg from './layout/HeroBg';
@@ -47,10 +47,10 @@ const Home = () => {
       count = -1;
     }
     setCount(count + 1);
-  }, 10000);
+  }, 7000);
 
   return (
-    <Fragment>
+    <main>
       <HeroContainer>
         <HeroWrap>
           {renderHero(latestProjects(projects))}
@@ -60,7 +60,7 @@ const Home = () => {
       <Featured>
         <ProjectGrid projects={featuredProjects(projects)} />
       </Featured>
-    </Fragment>
+    </main>
   );
 };
 
