@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProjectContainer from './layout/ProjectContainer';
 import DetailsWrap from '../../shared/DetailsWrap';
 import Details from '../../shared/Details';
 import Title from './layout/Title';
 import Links from './layout/Links';
 import Image from '../../shared/Image';
+
+const propTypes = {
+  project: PropTypes.object.isRequired
+};
 
 const ProjectLayout = ({ project }) => (
   <ProjectContainer>
@@ -28,5 +33,7 @@ const ProjectLayout = ({ project }) => (
     <Image src={project.image} alt={project.title} />
   </ProjectContainer>
 );
+
+ProjectLayout.propTypes = propTypes;
 
 export default ProjectLayout;

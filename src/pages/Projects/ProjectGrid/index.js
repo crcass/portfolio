@@ -1,5 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Thumbnail from '../../../components/Thumbnail';
+
+const propTypes = {
+  projects: PropTypes.array.isRequired
+};
 
 const renderThumbnails = projects =>
   projects.map(project => (
@@ -14,5 +19,7 @@ const renderThumbnails = projects =>
 const Layout = ({ projects }) => (
   <section className="projects">{renderThumbnails(projects)}</section>
 );
+
+Layout.propTypes = propTypes;
 
 export default Layout;
