@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e3abdc807068a27993dd2bcbb012a74",
+    "revision": "41e15a3a729fbcccb9954c7c9232711e",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "93d8150842cb1f4a93da",
+    "revision": "985765d96f15b1d91ef5",
     "url": "/portfolio/static/css/main.6d79c1df.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.89a61246.chunk.js"
   },
   {
-    "revision": "93d8150842cb1f4a93da",
-    "url": "/portfolio/static/js/main.8e16934d.chunk.js"
+    "revision": "985765d96f15b1d91ef5",
+    "url": "/portfolio/static/js/main.19371d94.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
@@ -22,10 +22,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1db7e743a4b3cefbbafdd5636e47f4d2",
     "url": "/portfolio/static/media/bamazon.1db7e743.png"
-  },
-  {
-    "revision": "05610ab5f7d01ae20be3c82cc88578f4",
-    "url": "/portfolio/static/media/edb.05610ab5.png"
   },
   {
     "revision": "4da8bd0a9c240d8ca6b8f444a2367f1e",
@@ -50,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a17773ab597665491641b8ad6f3be7bc",
     "url": "/portfolio/static/media/liri.a17773ab.png"
+  },
+  {
+    "revision": "2dcbbf6378a77231973a6027a9ec38e1",
+    "url": "/portfolio/static/media/portfolio.2dcbbf63.jpg"
   },
   {
     "revision": "3dba973c09c72cf00493aa9c38ecd48d",
