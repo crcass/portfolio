@@ -1,7 +1,7 @@
 import portfolio from './images/portfolio.jpg';
 import gbSearch from './images/gbSearch.jpg';
 import eplMemory from './images/eplMemory.jpg';
-import vNews from './images/vNews.png';
+import vNews from './images/vNews.jpg';
 import link from './images/link.jpg';
 // import edb from './images/edb.png';
 import bamazon from './images/bamazon.jpg';
