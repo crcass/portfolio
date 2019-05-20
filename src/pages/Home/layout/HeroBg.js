@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-const Image = styled.img`
+const HeroBg = styled.img`
+  opacity: 0;
   display: block;
   height: auto;
   width: 100%;
 `;
 
-export default Image;
+export default HeroBg;

@@ -1,23 +1,29 @@
 import React, { Fragment } from 'react';
+import ProjectLayout from '../../components/ProjectLayout';
+import ProjectGrid from '../Projects/ProjectGrid';
+import Latest from '../../components/ProjectLayout/layout/Latest';
+import LatestTitle from '../../components/ProjectLayout/layout/LatestTitle';
 import projects from '../../projects';
+import { latestProjects } from '../../helpers';
 
 const renderProjectPage = (route, projects) =>
   projects
     .filter(project => project.route === route)
-    .map(project => (
-      <article key={project.title}>
-        <h2>{project.title}</h2>
-        <p>{project.tech}</p>
-        <p>{project.description}</p>
-        <img src={project.image} alt={project.title} />
-        <a href={project.liveUrl}>Live</a>
-        <a href={project.githubUrl}>Github</a>
-      </article>
-    ));
+    .map(project => <ProjectLayout key={project.title} project={project} />);
 
 const ProjectPage = props => {
   const { route } = props.match.params;
-  return <Fragment>{renderProjectPage(route, projects)}</Fragment>;
+  return (
+    <Fragment>
+      {renderProjectPage(route, projects)}
+      <LatestTitle>
+        <h3>Latest Projects</h3>
+      </LatestTitle>
+      <Latest>
+        <ProjectGrid projects={latestProjects(projects)} />
+      </Latest>
+    </Fragment>
+  );
 };
 
 export default ProjectPage;

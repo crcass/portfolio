@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const NavContainer = styled.div`
   align-items: center;
   display: flex;
-  font-family: 'Questrial', sans-serif;
   padding: 0 0.375em;
   width: 50%;
 
@@ -50,6 +49,10 @@ const NavContainer = styled.div`
 
     &:visited {
       color: inherit;
+    }
+
+    &.active {
+      color: #222;
     }
   }
 `;

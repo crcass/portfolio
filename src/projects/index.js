@@ -22,7 +22,8 @@ const projects = [
     image: gbSearch,
     liveUrl: 'https://protected-caverns-27036.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/books-search',
-    route: 'google-books-search'
+    route: 'google-books-search',
+    featured: true
   },
   {
     title: 'EPL Memory Game',
@@ -58,7 +59,8 @@ const projects = [
     image: link,
     liveUrl: 'https://enigmatic-river-60007.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/friendfinder',
-    route: 'link'
+    route: 'link',
+    featured: true
   },
   {
     title: 'Bamazon',
@@ -67,7 +69,8 @@ const projects = [
     image: bamazon,
     liveUrl: 'https://youtu.be/4wMZ08lUm20',
     githubUrl: 'https://github.com/crcass/bamazon',
-    route: 'bamazon'
+    route: 'bamazon',
+    featured: true
   },
   {
     title: 'Hail to the Chief - CLI',
@@ -103,7 +106,8 @@ const projects = [
     image: rps,
     liveUrl: 'https://crcass.github.io/rps-multiplayer/',
     githubUrl: 'https://github.com/crcass/rps-multiplayer',
-    route: 'rps'
+    route: 'rps',
+    featured: true
   },
   {
     title: 'Super Search',

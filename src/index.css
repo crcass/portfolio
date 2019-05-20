@@ -1,3 +1,9 @@
 body {
   background: #f8f8f8;
+  color: #222;
+  font-family: 'Questrial', sans-serif;
+}
+
+p {
+  line-height: 1.4em;
 }

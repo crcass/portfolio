@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Center from './components/Center';
 import SiteContainer from './components/SiteContainer';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectPage from './pages/ProjectPage';
@@ -23,6 +24,7 @@ const App = () => (
           <Route exact path="/contact/" component={Contact} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </SiteContainer>
     </Center>
   </Router>

@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from './Layout';
+import ProjectGrid from './ProjectGrid';
 import projects from '../../projects';
 
-const Projects = props => <Layout projects={projects} />;
+const Projects = () => <ProjectGrid projects={projects} />;
 
 export default Projects;
