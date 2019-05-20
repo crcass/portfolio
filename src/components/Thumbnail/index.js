@@ -1,13 +1,14 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Image from '../../shared/Image';
 import ImageWrap from './layout/ImageWrap';
 import Overlay from './layout/Overlay';
 import TitleOverlay from './layout/TitleOverlay';
 
-const Thumbnail = ({ title, image, route }) => (
+const Thumbnail = ({ title, image, route, location }) => (
   <ImageWrap>
-    <Link to={route}>
+    <Link to={location !== '/projects/' ? `/projects/${route}` : route}>
       <Overlay className="overlay" />
       <TitleOverlay className="title">
         <p>{title}</p>
@@ -17,4 +18,4 @@ const Thumbnail = ({ title, image, route }) => (
   </ImageWrap>
 );
 
-export default Thumbnail;
+export default withRouter(Thumbnail);

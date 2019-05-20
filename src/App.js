@@ -22,11 +22,6 @@ const App = () => (
               <CSSTransition key={location.key} timeout={500} classNames="page">
                 <Switch location={location}>
                   <Route exact path="/portfolio/" component={Home} />
-                  <Route
-                    exact
-                    path="/portfolio/:route"
-                    component={ProjectPage}
-                  />
                   <Route exact path="/projects/" component={Projects} />
                   <Route
                     exact
