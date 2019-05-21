@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import TextContainer from '../../shared/TextContainer';
 import DetailsWrap from '../../shared/DetailsWrap';
 import Details from '../../shared/Details';
 
 const Profile = () => (
-  <main>
+  <Fragment>
     <TextContainer>
       <DetailsWrap>
         <Details>
@@ -48,7 +48,7 @@ const Profile = () => (
         </Details>
       </DetailsWrap>
     </TextContainer>
-  </main>
+  </Fragment>
 );
 
 export default Profile;
