@@ -5,6 +5,10 @@ const ImageWrap = styled.article`
   position: relative;
   width: 48%;
 
+  @media (max-width: 663px) {
+    width: 96%;
+  }
+
   a {
     transition: all 0.3s ease;
 
