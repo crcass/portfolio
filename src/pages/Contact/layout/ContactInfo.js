@@ -6,10 +6,18 @@ const ContactInfo = styled.div`
   padding: 0 2em 0 0.375em;
   width: 50%;
 
+  @media (max-width: 663px) {
+    padding: 0;
+  }
+
   img {
     padding-right: 0.75em;
     height: 100%;
     width: auto;
+
+    @media (max-width: 663px) {
+      padding-right: 0;
+    }
   }
 `;
 

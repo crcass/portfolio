@@ -6,6 +6,10 @@ const NavContainer = styled.div`
   padding: 0 0.375em;
   width: 50%;
 
+  @media (max-width: 663px) {
+    width: auto;
+  }
+
   h1 {
     align-items: center;
     color: #000;
@@ -26,6 +30,14 @@ const NavContainer = styled.div`
       color: #bbb;
       margin: 0.5em;
     }
+
+    @media (max-width: 663px) {
+      margin: 0.375em;
+
+      &:hover:after {
+        content: none;
+      }
+    }
   }
 
   ul {
@@ -41,6 +53,10 @@ const NavContainer = styled.div`
 
     &:hover {
       color: #222;
+    }
+
+    @media (max-width: 663px) {
+      margin-right: 1.26em;
     }
   }
 

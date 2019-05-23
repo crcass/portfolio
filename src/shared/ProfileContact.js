@@ -38,6 +38,10 @@ const ProfileContact = styled.main`
       text-decoration: underline;
     }
   }
+
+  a {
+    margin-right: 0;
+  }
 `;
 
 export default ProfileContact;

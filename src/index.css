@@ -36,3 +36,10 @@ p {
   display: none;
   opacity: 0;
 }
+
+@media (max-width: 663px) {
+  .site-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
