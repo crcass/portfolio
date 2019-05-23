@@ -19,7 +19,7 @@ const Header = ({ location }) => {
       <HeaderContainer>
         <NavContainer>
           <h1>
-            <Link to="/portfolio/">CC</Link>
+            <Link to="/">CC</Link>
           </h1>
         </NavContainer>
         <NavContainer>

@@ -2,7 +2,7 @@ import projects from '../projects';
 
 const findPage = route => {
   return (
-    route === 'portfolio' ||
+    route === undefined ||
     route === 'projects' ||
     route === 'profile' ||
     route === 'contact' ||
@@ -18,7 +18,7 @@ export const displayTitle = location => {
     return;
   }
   switch (path[index]) {
-    case 'portfolio':
+    case undefined:
       document.title = 'Home | Chris Cass';
       break;
     case 'projects':
