@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Portfolio',
     tech: 'React, React Router, styled-components',
-    description: `I wanted this portfolio to be clean and easy to navigate while being simple to maintain and update. The content on the Home, Projects, and individual project pages are dynamically populated from a stored object.`,
+    description: `I wanted this portfolio to be clean and easy to navigate while being simple to maintain and update. The content on the Home, Projects, and individual project pages are dynamically populated from one JSON object and change as I update that object.`,
     image: portfolio,
     liveUrl: 'https://crcass.github.io/portfolio',
     githubUrl: 'https://github.com/crcass/portfolio',
@@ -56,7 +56,7 @@ const projects = [
   {
     title: 'Link',
     tech: 'Express.js, Node.js, Axios, SCSS',
-    description: `Users input their name, add a photo, and answer a series of questions. Link matches the user against everyone else in the system and displays their new best friend.`,
+    description: `Link is a simple take on a dating app. Users input their name, add a photo, and answer a series of questions. Link matches the user against everyone else in the system and displays their new best friend.`,
     image: link,
     liveUrl: 'https://enigmatic-river-60007.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/friendfinder',
@@ -75,7 +75,7 @@ const projects = [
   {
     title: 'Bamazon',
     tech: 'Node.js, MySQL, Inquirer, Chalk',
-    description: `Bamazon is a command line software suite that includes a store front for customers, product management console, and supervisor tools.`,
+    description: `Bamazon is a command line software suite that includes a store front for customers, product management console, and supervisor tools. Customers can view current inventory and purchase products. The management console allows the user to view inventory levels, update inventory, and add new products. The supervisor tools allow the user to create new departments and view sales figures.`,
     image: bamazon,
     liveUrl: 'https://youtu.be/4wMZ08lUm20',
     githubUrl: 'https://github.com/crcass/bamazon',
@@ -85,7 +85,7 @@ const projects = [
   {
     title: 'Hail to the Chief - CLI',
     tech: 'Node.js, Inquirier, Chalk',
-    description: `User chooses letters until they win or run out of attempts. The game keeps track of the player's score for as long as the session is open.`,
+    description: `This is the CLI version of the Hail to the Chief web app. The user chooses letters until they win or run out of attempts. The game keeps track of the player's score for as long as the session is open.`,
     image: hailCLI,
     liveUrl: 'https://youtu.be/sonGXhng7kU',
     githubUrl: 'https://github.com/crcass/hail-cli',
@@ -103,7 +103,7 @@ const projects = [
   {
     title: 'Signal',
     tech: 'APIs, AJAX, jQuery, Bootstrap',
-    description: `A simple, easy to use website that allows business travelers to find their favorite food, events, & activities without having to sort through pages of reviews.`,
+    description: `Designed for business travelers, this app allows users to find their favorite food, events, & activities without having to sort through pages of reviews. The user enters their destination, travel date, as well as preferences for cuisine, music, & exercise and the user is presented with the two best options in each category. The user selects the options they want to save and are sent a text message with the details of their results.`,
     image: signal,
     liveUrl: 'https://crcass.github.io/project-one/',
     githubUrl: 'https://github.com/crcass/project-one',
@@ -112,7 +112,7 @@ const projects = [
   {
     title: 'RPS',
     tech: 'Firebase, jQuery',
-    description: `Two-player version of Rock, Paper, Scissors that is playable across browsers & devices. Players are able to use a built-in chat feature and cannot see the other player's choice during the game.`,
+    description: `This version of Rock, Paper, Scissors is played by two different players on different devices. Neither player can see the other's selection until the round is complete. Each player's stats persist between sessions and there is a custom built chat feature that players can use during the game.`,
     image: rps,
     liveUrl: 'https://crcass.github.io/rps-multiplayer/',
     githubUrl: 'https://github.com/crcass/rps-multiplayer',
@@ -122,7 +122,7 @@ const projects = [
   {
     title: 'Super Search',
     tech: 'jQuery, AJAX, Bootstrap',
-    description: `User can click a button to trigger various API calls based on their search criteria. Users can create custom search buttons that work exactly like the provided buttons.`,
+    description: `I was asked to create a demo that queries three different API's from a single user input. The user can click a button to trigger the API calls or enter a custom value into the input field. The user can load additional gifs from the button at the bottom of the page, and the gifs will start or stop their animation when clicked.`,
     image: supersearch,
     liveUrl: 'https://crcass.github.io/supersearch/',
     githubUrl: 'https://github.com/crcass/supersearch',
@@ -131,7 +131,7 @@ const projects = [
   {
     title: 'CFB Trivia',
     tech: 'jQuery, JavaScript, HTML, CSS',
-    description: `Trivia game that uses timers to automatically manipulate the DOM without user input. If the user does provide input, the next screen advances and a new timer begins.`,
+    description: `This trivia game uses timers to automatically manipulate the DOM without user input. Once the user starts the game, a question is displayed and they have 13 seconds to select an answer. If the user does not provide an answer, the post-question screen displays automatically. The game keeps track of the user's correct, incorrect, & unanswered questions and display the results at the end of the game.`,
     image: trivia,
     liveUrl: 'https://crcass.github.io/cfbtrivia/',
     githubUrl: 'https://github.com/crcass/cfbtrivia',
@@ -140,7 +140,7 @@ const projects = [
   {
     title: 'Starfighter Challenge',
     tech: 'jQuery, JavaScript, HTML, CSS',
-    description: `User selects one of four characters to start the game, and battles against the remaining characters. Player's health & attack power are updated throughout the game.`,
+    description: `In this game the user selects one of four characters to start the game, and battles against the remaining characters. When the attack button is clicked, the player's health and their enemies health is reduced based on attack values. If the player defeats an enemy, they select a new enemy to face. The player wins if they can default all three enemies`,
     image: starfighter,
     liveUrl: 'https://crcass.github.io/starfighter/',
     githubUrl: 'https://github.com/crcass/starfighter',
@@ -149,7 +149,7 @@ const projects = [
   {
     title: 'Hail to the Chief',
     tech: 'JavaScript, HTML, CSS',
-    description: `User chooses letters until they win or run out of attempts. The game keeps track of the player's score for as long as the session is open, and a short sound clip plays for each victory.`,
+    description: `This is a hangman-style game that uses the last names of 20th century US presidents. The user chooses letters until they win or run out of attempts. The game keeps track of the player's score for as long as the session is open, and a short sound clip plays for each victory.`,
     image: hail,
     liveUrl: 'https://crcass.github.io/hail/',
     githubUrl: 'https://github.com/crcass/hail',
