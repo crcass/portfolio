@@ -11,7 +11,7 @@ const DarkModeButton = styled.button`
   transition: color 0.3s ease;
 
   @media (max-width: 663px) {
-    margin-right: 1.125em;
+    margin-right: 0em;
   }
 
   &:hover {

@@ -43,7 +43,7 @@ const Profile = ({ dark }) => (
           <h2>Chris' Skills</h2>
           <p className="text">
             With the pace of modern web development, the learning never stops. I
-            continue to refine and expand by skillset to stay up-to-date with
+            continue to refine and expand my skillset to stay up-to-date with
             the latest trends in web development.
           </p>
           <p className="text">
