@@ -1,4 +1,5 @@
 import projects from '../projects';
+import { colors } from '../shared/colors';
 
 const findPage = route => {
   return (
@@ -54,3 +55,6 @@ export const handleHero = count => {
   current.style.opacity = 1;
   current.style.zIndex = 2;
 };
+
+export const handleDarkNav = dark =>
+  dark ? { color: colors.darkActive } : { color: colors.lightActive };

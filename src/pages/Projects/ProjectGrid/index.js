@@ -16,10 +16,10 @@ const renderThumbnails = projects =>
     />
   ));
 
-const Layout = ({ projects }) => (
+const ProjectGrid = ({ projects }) => (
   <section className="projects">{renderThumbnails(projects)}</section>
 );
 
-Layout.propTypes = propTypes;
+ProjectGrid.propTypes = propTypes;
 
-export default Layout;
+export default ProjectGrid;

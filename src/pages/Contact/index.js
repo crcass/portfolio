@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProfileContact from '../../shared/ProfileContact';
 import TextContainer from '../../shared/TextContainer';
 import DetailsWrap from '../../shared/DetailsWrap';
@@ -8,8 +9,12 @@ import Address from './layout/Address';
 import Image from '../../shared/Image';
 import profile from './profile.jpg';
 
-const Contact = () => (
-  <ProfileContact>
+const propTypes = {
+  dark: PropTypes.bool.isRequired
+};
+
+const Contact = ({ dark }) => (
+  <ProfileContact dark={dark}>
     <TextContainer>
       <DetailsWrap>
         <Details>
@@ -61,5 +66,7 @@ const Contact = () => (
     </TextContainer>
   </ProfileContact>
 );
+
+Contact.propTypes = propTypes;
 
 export default Contact;

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Header from './components/Header';
@@ -11,35 +11,59 @@ import Profile from './pages/Profile';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
-const App = () => (
-  <Router>
-    <Route
-      render={({ location }) => (
-        <Fragment>
-          <Header />
-          <Center>
-            <TransitionGroup className="site-container">
-              <CSSTransition key={location.key} timeout={500} classNames="page">
-                <Switch location={location}>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/projects/" component={Projects} />
-                  <Route
-                    exact
-                    path="/projects/:route"
-                    component={ProjectPage}
-                  />
-                  <Route exact path="/profile/" component={Profile} />
-                  <Route exact path="/contact/" component={Contact} />
-                  <Route component={NotFound} />
-                </Switch>
-              </CSSTransition>
-              <Footer />
-            </TransitionGroup>
-          </Center>
-        </Fragment>
-      )}
-    />
-  </Router>
-);
+const App = () => {
+  const [dark, setDark] = useState(false);
+
+  const darkMode = () => {
+    setDark(!dark);
+  };
+
+  return (
+    <Router>
+      <Route
+        render={({ location }) => (
+          <Fragment>
+            <Header dark={dark} darkMode={darkMode} />
+            <Center dark={dark}>
+              <TransitionGroup className="site-container">
+                <CSSTransition
+                  key={location.key}
+                  timeout={500}
+                  classNames="page"
+                >
+                  <Switch location={location}>
+                    <Route exact path="/" component={Home} />
+                    <Route
+                      exact
+                      path="/projects/"
+                      render={() => <Projects dark={dark} />}
+                    />
+                    <Route
+                      exact
+                      path="/projects/:route"
+                      render={props => <ProjectPage {...props} dark={dark} />}
+                    />
+                    <Route
+                      exact
+                      path="/profile/"
+                      render={() => <Profile dark={dark} />}
+                    />
+                    <Route
+                      exact
+                      path="/contact/"
+                      render={() => <Contact dark={dark} />}
+                    />
+                    <Route render={() => <NotFound dark={dark} />} />
+                  </Switch>
+                </CSSTransition>
+                <Footer dark={dark} />
+              </TransitionGroup>
+            </Center>
+          </Fragment>
+        )}
+      />
+    </Router>
+  );
+};
 
 export default App;

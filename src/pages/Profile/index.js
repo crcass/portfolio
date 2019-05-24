@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProfileContact from '../../shared/ProfileContact';
 import TextContainer from '../../shared/TextContainer';
 import DetailsWrap from '../../shared/DetailsWrap';
 import Details from '../../shared/Details';
 
-const Profile = () => (
-  <ProfileContact>
+const propTypes = {
+  dark: PropTypes.bool.isRequired
+};
+
+const Profile = ({ dark }) => (
+  <ProfileContact dark={dark}>
     <TextContainer>
       <DetailsWrap>
         <Details>
@@ -51,5 +56,7 @@ const Profile = () => (
     </TextContainer>
   </ProfileContact>
 );
+
+Profile.propTypes = propTypes;
 
 export default Profile;

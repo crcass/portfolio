@@ -1,32 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProjectContainer from './layout/ProjectContainer';
-import DetailsWrap from '../../shared/DetailsWrap';
-import Details from '../../shared/Details';
-import Title from './layout/Title';
+import Anchor from './layout/Anchor';
 import Links from './layout/Links';
+import ProjectContainer from './layout/ProjectContainer';
+import Title from './layout/Title';
+import Details from '../../shared/Details';
+import DetailsWrap from '../../shared/DetailsWrap';
 import Image from '../../shared/Image';
 
 const propTypes = {
+  dark: PropTypes.bool.isRequired,
   project: PropTypes.object.isRequired
 };
 
-const ProjectLayout = ({ project }) => (
+const ProjectLayout = ({ project, dark }) => (
   <ProjectContainer>
     <DetailsWrap>
-      <Details>
+      <Details dark={dark}>
         <Title>{project.title}</Title>
         <p>Technology: {project.tech}</p>
       </Details>
-      <Details>
+      <Details dark={dark}>
         <p>{project.description}</p>
-        <Links>
-          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+        <Links dark={dark}>
+          <Anchor
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            dark={dark}
+          >
             Demo
-          </a>
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+          </Anchor>
+          <Anchor
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            dark={dark}
+          >
             Github
-          </a>
+          </Anchor>
         </Links>
       </Details>
     </DetailsWrap>

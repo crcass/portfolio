@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import { colors } from '../../../shared/colors';
 
 const FooterColumn = styled.div`
   margin: 0.5em;
   width: 25%;
 
   a {
-    color: #222;
-    text-decoration: inherit;
-    transition: all 0.3s ease;
+    color: ${props => (props.dark ? colors.darkActive : colors.lightActive)};
+    text-decoration: none;
+    transition: color 1s ease;
 
     &:hover {
       text-decoration: underline;
@@ -15,7 +16,9 @@ const FooterColumn = styled.div`
   }
 
   p {
+    color: ${props => (props.dark ? colors.darkActive : colors.lightActive)};
     margin: 0;
+    transition: color 1s ease;
   }
 `;
 

@@ -1,54 +1,52 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import Navbar from './layout/Navbar';
 import HeaderContainer from './layout/HeaderContainer';
 import NavContainer from './layout/NavContainer';
-import { displayTitle } from '../../helpers';
+import NavList from './layout//NavList';
+import DarkModeButton from './layout//DarkModeButton';
+import { displayTitle, handleDarkNav } from '../../helpers';
 
 const propTypes = {
+  dark: PropTypes.bool.isRequired,
+  darkMode: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired
 };
 
-const Header = ({ location }) => {
+const Header = ({ location, dark, darkMode }) => {
   useEffect(() => displayTitle(location));
   useEffect(() => window.scrollTo(0, 0));
 
   return (
-    <Navbar>
+    <Navbar dark={dark}>
       <HeaderContainer>
-        <NavContainer>
+        <NavContainer dark={dark}>
           <h1>
-            <Link to="/">CC</Link>
+            <NavLink to="/">CC</NavLink>
           </h1>
         </NavContainer>
         <NavContainer className="links">
           <ul>
-            <li>
-              <Link
-                to="/projects/"
-                className={location.pathname === '/projects/' ? 'active' : null}
-              >
+            <NavList dark={dark}>
+              <NavLink to="/projects/" activeStyle={handleDarkNav(dark)}>
                 Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/profile/"
-                className={location.pathname === '/profile/' ? 'active' : null}
-              >
+              </NavLink>
+            </NavList>
+            <NavList dark={dark}>
+              <NavLink to="/profile/" activeStyle={handleDarkNav(dark)}>
                 Profile
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact/"
-                className={location.pathname === '/contact/' ? 'active' : null}
-              >
+              </NavLink>
+            </NavList>
+            <NavList dark={dark}>
+              <NavLink to="/contact/" activeStyle={handleDarkNav(dark)}>
                 Contact
-              </Link>
-            </li>
+              </NavLink>
+            </NavList>
           </ul>
+          <DarkModeButton onClick={darkMode} dark={dark}>
+            {dark ? 'Light Mode' : 'Dark Mode'}
+          </DarkModeButton>
         </NavContainer>
       </HeaderContainer>
     </Navbar>
