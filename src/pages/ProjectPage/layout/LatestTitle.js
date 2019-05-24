@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { colors } from '../../../shared/colors';
 
 const LatestTitle = styled.div`
-  width: 100%;
   margin: 0 1.1em;
 
   h3 {
