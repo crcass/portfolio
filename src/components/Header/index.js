@@ -44,7 +44,7 @@ const Header = ({ location, dark, darkMode }) => {
             </NavList>
           </ul>
           <DarkModeButton onClick={darkMode} dark={dark}>
-            {dark ? 'Light Mode' : 'Dark Mode'}
+            {dark ? 'Light' : 'Dark'}
           </DarkModeButton>
         </NavContainer>
       </HeaderContainer>

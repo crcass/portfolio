@@ -14,10 +14,7 @@ import projects from './projects';
 
 const App = () => {
   const [dark, setDark] = useState(false);
-
-  const darkMode = () => {
-    setDark(!dark);
-  };
+  const darkMode = () => setDark(!dark);
 
   return (
     <Router>
