@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import HeroWrap from './layout/HeroWrap';
 import HeroBg from './layout/HeroBg';
@@ -7,7 +8,6 @@ import HeroContainer from './layout/HeroContainer';
 import Featured from './layout/Featured';
 import Image from '../../shared/Image';
 import ProjectGrid from '../Projects/ProjectGrid';
-import projects from '../../projects';
 import { latestProjects, featuredProjects, handleHero } from '../../helpers';
 
 const renderHero = projects =>
@@ -19,7 +19,12 @@ const renderHero = projects =>
     </Hero>
   ));
 
-const Home = () => {
+const propTypes = {
+  projects: PropTypes.array.isRequired
+};
+
+const Home = ({ projects }) => {
+  useEffect(() => window.scrollTo(0, 0), []);
   useEffect(() => handleHero(count));
 
   function useInterval(callback, delay) {
@@ -63,5 +68,7 @@ const Home = () => {
     </main>
   );
 };
+
+Home.propTypes = propTypes;
 
 export default Home;

@@ -7,6 +7,7 @@ const LatestTitle = styled.div`
   h3 {
     color: ${props => (props.dark ? colors.darkActive : colors.lightActive)};
     font-size: 1em;
+    transition: color 1s ease;
   }
 `;
 

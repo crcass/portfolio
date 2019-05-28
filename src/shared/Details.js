@@ -10,6 +10,7 @@ const Details = styled.div`
   h2,
   p {
     color: ${props => (props.dark ? colors.darkActive : colors.lightActive)};
+    transition: color 1s ease;
   }
 
   @media (max-width: 663px) {

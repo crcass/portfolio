@@ -16,7 +16,6 @@ const propTypes = {
 
 const Header = ({ location, dark, darkMode }) => {
   useEffect(() => displayTitle(location));
-  useEffect(() => window.scrollTo(0, 0));
 
   return (
     <Navbar dark={dark}>

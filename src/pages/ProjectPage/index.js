@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ProjectLayout from '../../components/ProjectLayout';
 import ProjectGrid from '../Projects/ProjectGrid';
 import Latest from './layout/Latest';
 import LatestTitle from './layout/LatestTitle';
-import projects from '../../projects';
 import { latestProjects } from '../../helpers';
 
 const propTypes = {
@@ -16,7 +15,8 @@ const propTypes = {
     path: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
   }),
-  dark: PropTypes.bool.isRequired
+  dark: PropTypes.bool.isRequired,
+  projects: PropTypes.array.isRequired
 };
 
 const renderProjectPage = (route, projects, dark) =>
@@ -27,8 +27,9 @@ const renderProjectPage = (route, projects, dark) =>
     ));
 
 const ProjectPage = props => {
+  useEffect(() => window.scrollTo(0, 0), []);
   const { route } = props.match.params;
-  const { dark } = props;
+  const { dark, projects } = props;
   return (
     <main>
       {renderProjectPage(route, projects, dark)}

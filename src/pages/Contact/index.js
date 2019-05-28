@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ProfileContact from '../../shared/ProfileContact';
 import TextContainer from '../../shared/TextContainer';
@@ -13,59 +13,62 @@ const propTypes = {
   dark: PropTypes.bool.isRequired
 };
 
-const Contact = ({ dark }) => (
-  <ProfileContact dark={dark}>
-    <TextContainer>
-      <DetailsWrap>
-        <Details>
-          <a
-            href="https://www.linkedin.com/in/chris-cass/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chris' LinkedIn
-          </a>
-          <a
-            href="https://github.com/crcass"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chris' Github
-          </a>
-        </Details>
-        <Details>
-          <p>
-            I love meeting new people! If you have an interesting idea, let's
-            grab a cup of coffee and talk about how I can help bring your idea
-            to life. If you're interested in my work, please reach out.
-          </p>
-        </Details>
-      </DetailsWrap>
-    </TextContainer>
-    <TextContainer className="border">
-      <DetailsWrap>
-        <Details>
-          <p>Contact Chris</p>
-        </Details>
-        <ContactInfo>
-          <Image src={profile} alt="Chris Cass" />
-          <Address>
-            <h2>Chris Cass</h2>
-            <p>Web Developer</p>
+const Contact = ({ dark }) => {
+  useEffect(() => window.scrollTo(0, 0), []);
+  return (
+    <ProfileContact dark={dark}>
+      <TextContainer>
+        <DetailsWrap>
+          <Details>
             <a
-              href="https://drive.google.com/file/d/1RxCgpv_YfMCexxorz1m4cChe6EmpfL1C/view?usp=sharing"
+              href="https://www.linkedin.com/in/chris-cass/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Chris' Resume
+              Chris' LinkedIn
             </a>
-            <a href="mailto:ccass@live.com">Email Chris</a>
-          </Address>
-        </ContactInfo>
-      </DetailsWrap>
-    </TextContainer>
-  </ProfileContact>
-);
+            <a
+              href="https://github.com/crcass"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chris' Github
+            </a>
+          </Details>
+          <Details>
+            <p>
+              I love meeting new people! If you have an interesting idea, let's
+              grab a cup of coffee and talk about how I can help bring your idea
+              to life. If you're interested in my work, please reach out.
+            </p>
+          </Details>
+        </DetailsWrap>
+      </TextContainer>
+      <TextContainer className="border">
+        <DetailsWrap>
+          <Details>
+            <p>Contact Chris</p>
+          </Details>
+          <ContactInfo>
+            <Image src={profile} alt="Chris Cass" />
+            <Address>
+              <h2>Chris Cass</h2>
+              <p>Web Developer</p>
+              <a
+                href="https://drive.google.com/file/d/1RxCgpv_YfMCexxorz1m4cChe6EmpfL1C/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chris' Resume
+              </a>
+              <a href="mailto:ccass@live.com">Email Chris</a>
+            </Address>
+          </ContactInfo>
+        </DetailsWrap>
+      </TextContainer>
+    </ProfileContact>
+  );
+};
 
 Contact.propTypes = propTypes;
 

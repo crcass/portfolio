@@ -10,6 +10,7 @@ import ProjectPage from './pages/ProjectPage';
 import Profile from './pages/Profile';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import projects from './projects';
 
 const App = () => {
   const [dark, setDark] = useState(false);
@@ -32,16 +33,28 @@ const App = () => {
                   classNames="page"
                 >
                   <Switch location={location}>
-                    <Route exact path="/" component={Home} />
+                    <Route
+                      exact
+                      path="/"
+                      render={() => <Home projects={projects} />}
+                    />
                     <Route
                       exact
                       path="/projects/"
-                      render={() => <Projects dark={dark} />}
+                      render={() => (
+                        <Projects dark={dark} projects={projects} />
+                      )}
                     />
                     <Route
                       exact
                       path="/projects/:route"
-                      render={props => <ProjectPage {...props} dark={dark} />}
+                      render={props => (
+                        <ProjectPage
+                          {...props}
+                          dark={dark}
+                          projects={projects}
+                        />
+                      )}
                     />
                     <Route
                       exact
