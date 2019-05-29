@@ -1,7 +1,6 @@
-import projects from '../projects';
 import { colors } from '../shared/colors';
 
-const findPage = route => {
+const findPage = (route, projects) => {
   return (
     route === undefined ||
     route === 'projects' ||
@@ -11,10 +10,10 @@ const findPage = route => {
   );
 };
 
-export const displayTitle = location => {
+export const displayTitle = (location, projects) => {
   const path = location.pathname.split('/').filter(path => path !== '');
   const index = path.length - 1;
-  if (!findPage(path[index])) {
+  if (!findPage(path[index], projects)) {
     document.title = '404 | Chris Cass';
     return;
   }
@@ -41,7 +40,7 @@ export const displayTitle = location => {
 export const latestProjects = projects =>
   projects.filter((project, i) => i < 4);
 
-export const featuredProjects = projeects =>
+export const featuredProjects = projects =>
   projects.filter(project => project.featured);
 
 export const handleHero = count => {

@@ -21,7 +21,7 @@ const App = () => {
       <Route
         render={({ location }) => (
           <Fragment>
-            <Header dark={dark} darkMode={darkMode} />
+            <Header dark={dark} darkMode={darkMode} projects={projects} />
             <Center dark={dark}>
               <TransitionGroup className="site-container">
                 <CSSTransition

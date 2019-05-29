@@ -11,11 +11,12 @@ import { displayTitle, handleDarkNav } from '../../helpers';
 const propTypes = {
   dark: PropTypes.bool.isRequired,
   darkMode: PropTypes.func.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  projects: PropTypes.array.isRequired
 };
 
-const Header = ({ location, dark, darkMode }) => {
-  useEffect(() => displayTitle(location));
+const Header = ({ dark, darkMode, location, projects }) => {
+  useEffect(() => displayTitle(location, projects));
 
   return (
     <Navbar dark={dark}>
