@@ -9,6 +9,7 @@ const propTypes = {
 
 const Projects = ({ dark, projects }) => {
   useEffect(() => window.scrollTo(0, 0), []);
+
   return <ProjectGrid dark={dark} projects={projects} />;
 };
 

@@ -8,6 +8,7 @@ const propTypes = {
 
 const NotFound = ({ dark }) => {
   useEffect(() => window.scrollTo(0, 0), []);
+
   return (
     <NotFoundWrap dark={dark}>
       <h2>Sorry, the page you're looking for can't be found</h2>

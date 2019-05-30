@@ -28,8 +28,10 @@ const renderProjectPage = (route, projects, dark) =>
 
 const ProjectPage = props => {
   useEffect(() => window.scrollTo(0, 0), []);
+
   const { route } = props.match.params;
   const { dark, projects } = props;
+
   return (
     <main>
       {renderProjectPage(route, projects, dark)}

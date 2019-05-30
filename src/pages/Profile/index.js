@@ -11,6 +11,7 @@ const propTypes = {
 
 const Profile = ({ dark }) => {
   useEffect(() => window.scrollTo(0, 0), []);
+
   return (
     <ProfileContact dark={dark}>
       <TextContainer>
@@ -33,12 +34,11 @@ const Profile = ({ dark }) => {
             <h2>About Chris</h2>
             <p className="text">
               Having previously worked as a high school band director, I
-              understand the importance of teamwork, communication, and
-              strong-problem solving skills. Teaching others to focus on
-              incremental improvement has giving me a strong foundation for
-              improving my own skills as a developer. In my free time I enjoy
-              travling, music festivals, and trying to track down the best food
-              around.
+              understand the importance of teamwork, communication, and strong
+              problem-solving skills. Teaching others to focus on incremental
+              improvement has giving me a strong foundation for improving my own
+              skills as a developer. In my free time I enjoy travling, music
+              festivals, and trying to track down the best food around.
             </p>
           </Details>
           <Details>

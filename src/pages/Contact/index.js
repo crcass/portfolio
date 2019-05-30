@@ -15,6 +15,7 @@ const propTypes = {
 
 const Contact = ({ dark }) => {
   useEffect(() => window.scrollTo(0, 0), []);
+
   return (
     <ProfileContact dark={dark}>
       <TextContainer>

@@ -8,7 +8,25 @@ import HeroContainer from './layout/HeroContainer';
 import Featured from './layout/Featured';
 import Image from '../../shared/Image';
 import ProjectGrid from '../Projects/ProjectGrid';
-import { latestProjects, featuredProjects, handleHero } from '../../helpers';
+import { featuredProjects, handleHero, latestProjects } from '../../helpers';
+
+const useInterval = (callback, delay) => {
+  const savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+};
 
 const renderHero = projects =>
   projects.map(project => (
@@ -25,27 +43,9 @@ const propTypes = {
 
 const Home = ({ projects }) => {
   useEffect(() => window.scrollTo(0, 0), []);
-  useEffect(() => handleHero(count));
-
-  function useInterval(callback, delay) {
-    const savedCallback = useRef();
-
-    useEffect(() => {
-      savedCallback.current = callback;
-    }, [callback]);
-
-    useEffect(() => {
-      function tick() {
-        savedCallback.current();
-      }
-      if (delay !== null) {
-        let id = setInterval(tick, delay);
-        return () => clearInterval(id);
-      }
-    }, [delay]);
-  }
 
   let [count, setCount] = useState(0);
+  useEffect(() => handleHero(count));
 
   useInterval(() => {
     if (count === 3) {
