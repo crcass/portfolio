@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Portfolio',
     tech: 'React, React Router, styled-components',
-    description: `I wanted this portfolio to be clean and easy to navigate while being simple to maintain and update. The content on the Home, Projects, and individual project pages are dynamically populated from one JSON object and change as I update that object.`,
+    description: `I wanted this portfolio to be clean and easy to navigate while being simple to maintain and update. The content on the Home, Projects, and individual project pages are dynamically populated from a single array of JSON objects.`,
     image: portfolio,
     liveUrl: 'https://crcass.github.io/portfolio',
     githubUrl: 'https://github.com/crcass/portfolio',
@@ -28,7 +28,7 @@ const projects = [
     title: 'Google Books Search',
     tech:
       'mongoDB, Express, Node, React, Axios, React Router, styled-components',
-    description: `This full-stack app allows users to search the Google Books API for content, save an item's information to a database, view a list of saved items and remove them from the database.`,
+    description: `This project was an exercise to build a full-stack React website. I wanted to combine my knowledge of API calls through Axios, Express routing, and my MongoDB skills into a React app. I also wanted to continue improving my knowledge and understand of styled-components and push myself to take some chances on styling & design while remaining simple to use.`,
     image: gbSearch,
     liveUrl: 'https://protected-caverns-27036.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/books-search',
@@ -38,7 +38,7 @@ const projects = [
   {
     title: 'EPL Memory Game',
     tech: 'React, styled-components',
-    description: `The user tries to select as many teams as they can without choosing any team more than once. After each attempt, the images are shuffled and the user tries again. The user's score & high score are updated accordingly, and a message is displayed to show success or failure.`,
+    description: `A memory game where the user tries to select as many teams as they can without choosing any team more than once. After each attempt, the images are shuffled and the user tries again. The user's score & high score are updated accordingly, and a message is displayed to show success or failure. This game was used as a way to improve my React skills and begin using styled-components. I thought using the teams in the English Premier League would provide a good challenge for anyone that plays the game due the to the number of teams and the similarity in many of the colors & logos.`,
     image: eplMemory,
     liveUrl: 'https://crcass.github.io/memory-game/',
     githubUrl: 'https://github.com/crcass/memory-game',
@@ -47,7 +47,7 @@ const projects = [
   {
     title: 'V News',
     tech: 'mongoDB, Handlebars.js, Express.js, Node.js, SCSS',
-    description: `V News scrapes websites for news articles, stores them in a database, & displays them to the user. Users can leave a note, and add or remove their favorites.`,
+    description: `V News is an app where users can view headlines, images, & authors for each article, leave a comment, and add an article to their favorites. All articles link directly to The Verge. This app was an exercise in scraping a news site for information, then displaying that info using server-side rendering with Handlebars and Express. I wanted users to be able to leave comments on news articles and save articles for future reading.`,
     image: vNews,
     liveUrl: 'https://young-scrubland-84437.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/vnews',
@@ -56,7 +56,7 @@ const projects = [
   {
     title: 'Link',
     tech: 'Express.js, Node.js, Axios, SCSS',
-    description: `Link is a simple take on a dating app. Users input their name, add a photo, and answer a series of questions. Link matches the user against everyone else in the system and displays their new best friend.`,
+    description: `This app is an exercies in taking in user data, comparing it against existing data, and finding the closest match. I wanted this app to be clean and functional while having some stronger design elements. I wanted to avoid using a CSS library like Bootstrap to push my own styling skills, and I used this project to start learning the Sass CSS pre-processor.`,
     image: link,
     liveUrl: 'https://enigmatic-river-60007.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/friendfinder',
