@@ -20,7 +20,7 @@ const projects = [
     tech: 'React, React Router, styled-components',
     description: `I wanted this portfolio to be clean and easy to navigate while being simple to maintain and update. The content on the Home, Projects, and individual project pages are dynamically populated from a single array of JSON objects.`,
     image: portfolio,
-    liveUrl: 'https://crcass.github.io/portfolio',
+    liveUrl: 'https://crcass.netlify.com',
     githubUrl: 'https://github.com/crcass/portfolio',
     route: 'portfolio'
   },
@@ -28,7 +28,7 @@ const projects = [
     title: 'Google Books Search',
     tech:
       'mongoDB, Express, Node, React, Axios, React Router, styled-components',
-    description: `This project was an exercise to build a full-stack React website. I wanted to combine my knowledge of API calls through Axios, Express routing, and my MongoDB skills into a React app. I also wanted to continue improving my knowledge and understand of styled-components and push myself to take some chances on styling & design while remaining simple to use.`,
+    description: `This project was an exercise to build a full-stack React website. I wanted to combine my knowledge of API calls through Axios, Express routing, and my MongoDB skills into a React app. I also wanted to continue improving my knowledge and understand of styled-components and push myself to take some chances on styling & design while keeping the app simple to use.`,
     image: gbSearch,
     liveUrl: 'https://protected-caverns-27036.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/books-search',

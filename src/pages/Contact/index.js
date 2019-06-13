@@ -62,7 +62,7 @@ const Contact = ({ dark }) => {
               >
                 Chris' Resume
               </a>
-              <a href="mailto:ccass@live.com">Email Chris</a>
+              <a href="mailto:ccass@live.com">ccass@live.com</a>
             </Address>
           </ContactInfo>
         </DetailsWrap>
