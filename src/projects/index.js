@@ -1,9 +1,10 @@
+import devpool from './images/devpool.jpg';
 import portfolio from './images/portfolio.jpg';
 import gbSearch from './images/gbSearch.jpg';
 import eplMemory from './images/eplMemory.jpg';
 import vNews from './images/vNews.jpg';
 import link from './images/link.jpg';
-// import edb from './images/edb.png';
+import edb from './images/edb.jpg';
 import bamazon from './images/bamazon.jpg';
 import hailCLI from './images/hailCLI.jpg';
 import liri from './images/liri.jpg';
@@ -15,6 +16,17 @@ import starfighter from './images/starfighter.jpg';
 import hail from './images/hail.jpg';
 
 const projects = [
+  {
+    title: 'Devpool',
+    tech:
+      'React, React Redux, Redux-Sagas, Redux Form, React Router, Firebase, Express, Node, Axios, MySQL, Sequelize, styled-components',
+    description: `This project was created as a way to become more comfortable with Redux and to learn to use Redux-Sagas. Devpool is a site for recruiters to connect with junior developers. This app uses the GitHub API to fetch the dev's most recent repositories, lets recruiters leave messages & links for the devs, and lets recruiters post jobs. Devs can login, add their info if not already in our system, see their messages and view & save jobs from the jobs board.`,
+    image: devpool,
+    liveUrl: 'https://devpool2.herokuapp.com/',
+    githubUrl: 'https://github.com/crcass/devpool',
+    route: 'devpool',
+    featured: true
+  },
   {
     title: 'Portfolio',
     tech: 'React, React Router, styled-components',
@@ -60,18 +72,17 @@ const projects = [
     image: link,
     liveUrl: 'https://enigmatic-river-60007.herokuapp.com/',
     githubUrl: 'https://github.com/crcass/friendfinder',
-    route: 'link',
-    featured: true
+    route: 'link'
   },
-  // {
-  //   title: 'EDB Express',
-  //   tech: 'MySQL, Handlebars.js, Express.js, Node.js, SCSS',
-  //   description: `Edb Express is a simple to-do list that allows users to input a type of burger they would like to eat, save it to the database, and update the database once they have received their order.`,
-  //   image: edb,
-  //   liveUrl: 'https://morning-shelf-39455.herokuapp.com/',
-  //   githubUrl: 'https://github.com/crcass/burger',
-  //   route: 'edb-express'
-  // },
+  {
+    title: 'EDB Express',
+    tech: 'MySQL, Handlebars.js, Express.js, Node.js, SCSS',
+    description: `Edb Express is a simple to-do list that allows users to input a type of burger they would like to eat, save it to the database, and update the database once they have received their order.`,
+    image: edb,
+    liveUrl: 'https://morning-shelf-39455.herokuapp.com/',
+    githubUrl: 'https://github.com/crcass/burger',
+    route: 'edb-express'
+  },
   {
     title: 'Bamazon',
     tech: 'Node.js, MySQL, Inquirer, Chalk',
