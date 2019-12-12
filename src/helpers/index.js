@@ -38,7 +38,7 @@ export const displayTitle = (location, projects) => {
 };
 
 export const latestProjects = projects =>
-  projects.filter((project, i) => i < 4);
+  projects.filter((_project, i) => i < 4);
 
 export const featuredProjects = projects =>
   projects.filter(project => project.featured);
