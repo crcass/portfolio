@@ -27,7 +27,6 @@ I wanted to have a smoother user experience, so I spent some time working out pa
 ## Future Development
 
 - I am currently working on adding a custom CMS that will allow me to update the site without having to rebuild each time
-- I am working on integrating social media (Twitter, Instagram, etc.) into the site
 - I will be adding default images to appear while the project images are loading. This will prevent layout/re-flow problems while the images are being downloaded.
 
 ## Known Issues
