@@ -1,20 +1,25 @@
 import React from 'react';
 import { ROUTES } from '../../constants/routes';
+import { Name } from '../../constants/types';
 import { footerData } from '../../data/footerData';
 import Separator from '../Separator';
 import FooterLink from './FooterLink';
 import { FooterColumn, FooterContainer, FooterContentWrapper, StyledLink } from './styles';
 
+interface Props {
+  name: Name;
+}
+
 const separatorMarginBottom = 32;
 
-const FooterContent = () => (
+const FooterContent: React.FC<Props> = ({ name }) => (
   <FooterContainer>
     <Separator marginBottom={separatorMarginBottom} />
 
     <FooterContentWrapper>
       <FooterColumn>
         <StyledLink to={ROUTES.HOME}>
-          Chris Cass
+          {name.firstName} {name.lastName}
         </StyledLink>
       </FooterColumn>
 

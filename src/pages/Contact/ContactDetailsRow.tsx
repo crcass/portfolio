@@ -1,23 +1,37 @@
 import React from 'react';
 import InfoCard from '../../components/InfoCard';
 import { RowWrapper } from '../../components/InfoCard/styles';
+import { Name } from '../../constants/types';
 import ContactInfoDetails from './ContactInfoDetails';
 import { ContactInfoContainer, ContactInfoImage } from './styles';
 
-const ContactDetailsRow: React.FC = () => (
-  <RowWrapper>
-    <InfoCard title="Contact Chris" />
+interface Props {
+  name: Name;
+  position: string;
+}
 
-    <ContactInfoContainer>
-      <ContactInfoImage
-        alt="Photo of Chris"
-        src={require('../../assets/images/profile/profile.jpg')}
-        thumbnailSrc={require('../../assets/images/profile/thumbnails/profile_tn.jpg')}
-      />
+const ContactDetailsRow: React.FC<Props> = ({ name, position }) => {
+  const imageAlt = `Photo of ${name.firstName}`;
+  const title = `Contact ${name.firstName}`
 
-      <ContactInfoDetails />
-    </ContactInfoContainer>
-  </RowWrapper>
-);
+  return (
+    <RowWrapper>
+      <InfoCard title={title} />
+
+      <ContactInfoContainer>
+        <ContactInfoImage
+          alt={imageAlt}
+          src={require('../../assets/images/profile/profile.jpg')}
+          thumbnailSrc={require('../../assets/images/profile/thumbnails/profile_tn.jpg')}
+        />
+
+        <ContactInfoDetails
+          name={name}
+          position={position}
+        />
+      </ContactInfoContainer>
+    </RowWrapper>
+  )
+};
 
 export default ContactDetailsRow;

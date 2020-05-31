@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
-import { mediaQueries } from '../../constants/cssSelectors';
+import { cssSelectors, mediaQueries } from '../../constants/cssSelectors';
 
 export const Footer = styled.footer({
   display: 'flex',
@@ -35,10 +35,10 @@ export const FooterWrapper = styled.div({
   width: '100%',
 });
 export const StyledLink = styled(Link)({
-  '&:hover': {
+  [cssSelectors.hover]: {
     textDecorationLine: 'underline',
   },
-  '&:visited': {
+  [cssSelectors.visited]: {
     color: undefined,
   },
   [mediaQueries.prefersColorsSchemeDark]: {

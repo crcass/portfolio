@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
+import { cssSelectors } from '../../constants/cssSelectors';
 import { isSafari } from '../../utils/browserDetection';
 
 export const GridContainer = styled.div({
@@ -20,7 +21,7 @@ export const GridItemImage = styled.img({
   width: '100%',
 });
 export const GridItemLink = styled(Link)({
-  '&:hover': {
+  [cssSelectors.hover]: {
     '.overlay': {
       opacity: 0.7,
     },

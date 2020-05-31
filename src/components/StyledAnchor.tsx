@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mediaQueries } from '../constants/cssSelectors';
+import { cssSelectors, mediaQueries } from '../constants/cssSelectors';
 
 interface Props {
   darkModeColor?: string;
@@ -14,15 +14,15 @@ interface Props {
 }
 
 const StyledAnchor = styled.a((props: Props) => ({
-  '&:hover': {
+  [cssSelectors.hover]: {
     color: props.hoverColor,
     textDecorationLine: 'underline',
   },
-  '&:visited': {
+  [cssSelectors.visited]: {
     color: undefined,
   },
   [mediaQueries.prefersColorsSchemeDark]: {
-    '&:hover': {
+    [cssSelectors.hover]: {
       color: props.darkModeHoverColor,
     },
     color: props.darkModeColor,

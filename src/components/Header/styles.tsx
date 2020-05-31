@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
-import { mediaQueries } from '../../constants/cssSelectors';
+import { cssSelectors, mediaQueries } from '../../constants/cssSelectors';
 
 export const HeaderContainer = styled.div({
   display: 'flex',
@@ -64,7 +64,7 @@ export const NavUL = styled.ul`
   padding: unset;
 `;
 export const NavListItem = styled.li({
-  '&:hover': {
+  [cssSelectors.hover]: {
     [mediaQueries.prefersColorsSchemeDark]: {
       color: colors.lighter,
     },

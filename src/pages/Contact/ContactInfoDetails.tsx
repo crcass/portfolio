@@ -1,27 +1,41 @@
 import React from 'react';
+import { Name } from '../../constants/types';
 import { contactLinks } from '../../data/contactData';
+import { pluralize } from '../../utils/string';
 import { ContactInfoLink, ContactInfoText, ContactInfoWrapper } from './styles';
 
-const ContactInfoDetails = () => (
-  <ContactInfoWrapper>
-    <ContactInfoText>
-      Chris Cass
-    </ContactInfoText>
+interface Props {
+  position: string;
+  name: Name;
+}
 
-    <ContactInfoText grey>
-      Software Developer
-    </ContactInfoText>
+const ContactInfoDetails: React.FC<Props> = ({ position, name }) => {
+  const pluralizedName = pluralize(name.firstName);
 
-    <ContactInfoLink
-      href={contactLinks.resumeUrl}
-      title="Chris' Resume"
-    />
+  const resumeTitle = `${pluralizedName} Resume`;
+  const emailTitle = `Email ${name.firstName}`;
 
-    <ContactInfoLink
-      href={`mailto:${contactLinks.email}`}
-      title="Email Chris"
-    />
-  </ContactInfoWrapper>
-);
+  return (
+    <ContactInfoWrapper>
+      <ContactInfoText>
+        {name.firstName} {name.lastName}
+      </ContactInfoText>
+
+      <ContactInfoText grey>
+        {position}
+      </ContactInfoText>
+
+      <ContactInfoLink
+        href={contactLinks.resumeUrl}
+        title={resumeTitle}
+      />
+
+      <ContactInfoLink
+        href={`mailto:${contactLinks.email}`}
+        title={emailTitle}
+      />
+    </ContactInfoWrapper>
+  )
+};
 
 export default ContactInfoDetails;
