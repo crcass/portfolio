@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { mediaQueries } from '../constants/cssSelectors';
 
 interface Props {
-  color?: string;
   darkModeColor?: string;
   darkModeHoverColor?: string;
+  fontColor?: string;
   fontSize?: number;
   hoverColor?: string;
   href: string;
@@ -20,13 +21,13 @@ const StyledAnchor = styled.a((props: Props) => ({
   '&:visited': {
     color: undefined,
   },
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     '&:hover': {
       color: props.darkModeHoverColor,
     },
     color: props.darkModeColor,
   },
-  color: props.color,
+  color: props.fontColor,
   fontSize: props.fontSize ? `${props.fontSize}px` : undefined,
   lineHeight: props.fontSize ? `${props.lineHeight}px` : undefined,
   marginRight: props.marginRight ?? undefined,

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../constants/colors";
+import { mediaQueries } from "../../constants/cssSelectors";
 
 export const InfoPageContainer = styled.div({
   display: 'flex',
@@ -15,7 +16,7 @@ export const InfoCardContainer = styled.div({
   minWidth: '268px',
 });
 export const InfoCardHeader = styled.h2({
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     color: colors.lighter,
   },
   color: colors.darkest,
@@ -24,7 +25,7 @@ export const InfoCardHeader = styled.h2({
   margin: '0 0 28px',
 });
 export const Paragraph = styled.p((props: { largeParagraph?: boolean }) => ({
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     color: props.largeParagraph ? colors.lighter : undefined,
   },
   color: props.largeParagraph ? colors.darkest : colors.dark,

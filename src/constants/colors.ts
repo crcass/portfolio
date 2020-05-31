@@ -12,12 +12,12 @@ interface Colors {
 
 export const colors: Colors = {
   black: '#000000',
-  dark: '#a1a1a1', // backgroundDark
-  darker: '#383838', // activeDark
+  dark: '#a1a1a1',
+  darker: '#383838',
   darkest: '#222222',
-  light: '#dedee1', // activeLight
-  lighter: '#efefef', // backgroundLight
+  light: '#dedee1',
+  lighter: '#efefef',
   lightest: '#f8f8f8',
-  medium: '#bbbbbb', // anchor
+  medium: '#bbbbbb',
   white: '#ffffff',
 };

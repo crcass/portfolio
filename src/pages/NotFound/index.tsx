@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
+import { mediaQueries } from '../../constants/cssSelectors';
 
 const NotFoundWrapper = styled.div({
   display: 'flex',
   justifyContent: 'center',
 });
 const NotFoundHeading = styled.h2({
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     color: colors.lighter,
   },
   color: colors.darkest,

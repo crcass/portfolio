@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
+import { mediaQueries } from '../../constants/cssSelectors';
 
 export const Footer = styled.footer({
   display: 'flex',
@@ -38,9 +39,9 @@ export const StyledLink = styled(Link)({
     textDecorationLine: 'underline',
   },
   '&:visited': {
-    color: 'none',
+    color: undefined,
   },
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     color: colors.lighter,
   },
   color: colors.darkest,

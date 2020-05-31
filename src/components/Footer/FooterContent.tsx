@@ -1,9 +1,8 @@
 import React from 'react';
-import { colors } from '../../constants/colors';
 import { ROUTES } from '../../constants/routes';
 import { footerData } from '../../data/footerData';
 import Separator from '../Separator';
-import StyledAnchor from '../StyledAnchor';
+import FooterLink from './FooterLink';
 import { FooterColumn, FooterContainer, FooterContentWrapper, StyledLink } from './styles';
 
 const separatorMarginBottom = 32;
@@ -21,15 +20,10 @@ const FooterContent = () => (
 
       {footerData.map(data => (
         <FooterColumn key={data.title}>
-          <StyledAnchor
-            color={colors.darkest}
-            darkModeColor={colors.lighter}
+          <FooterLink
             href={data.url}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            {data.title}
-          </StyledAnchor>
+            title={data.title}
+          />
         </FooterColumn>
       ))}
     </FooterContentWrapper>

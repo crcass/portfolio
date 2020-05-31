@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../constants/colors";
+import { mediaQueries } from "../../constants/cssSelectors";
 
 
 export const LatestProjectsContainer = styled.div({
@@ -11,7 +12,7 @@ export const HeaderWrapper = styled.div({
   margin: '0 6px 12px',
 });
 export const HeaderText = styled.h3({
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     color: colors.lighter,
   },
   color: colors.darkest,

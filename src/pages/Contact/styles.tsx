@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Image from '../../components/Image';
 import StyledAnchor from '../../components/StyledAnchor';
 import { colors } from '../../constants/colors';
+import { mediaQueries } from '../../constants/cssSelectors';
 
 interface InfoTextProps {
   grey?: boolean;
@@ -27,7 +28,7 @@ export const ContactInfoContainer = styled.div({
 });
 
 export const ContactInfoText = styled.p((props: InfoTextProps) => ({
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     color: props.grey ? undefined : colors.lighter,
   },
   color: props.grey ? colors.dark : colors.darkest,
@@ -72,8 +73,8 @@ export const ContactInfoLink: React.FC<ContactInfoLinkProps> = ({
   title,
 }) => (
     <StyledAnchor
-      color={colors.dark}
       darkModeHoverColor={colors.lighter}
+      fontColor={colors.dark}
       fontSize={contactInfoStyle.fontSize}
       hoverColor={colors.darkest}
       href={href}

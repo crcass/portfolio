@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
+import { mediaQueries } from '../../constants/cssSelectors';
 
 export const HeaderContainer = styled.div({
   display: 'flex',
@@ -39,7 +40,7 @@ export const HeaderLogo = styled.h1({
 }
 `);
 export const Header = styled.header({
-  '@media(prefers-color-scheme: dark)': {
+  [mediaQueries.prefersColorsSchemeDark]: {
     backgroundColor: colors.black,
   },
   backdropFilter: 'saturate(180%) blur(20px)',
@@ -64,7 +65,7 @@ export const NavUL = styled.ul`
 `;
 export const NavListItem = styled.li({
   '&:hover': {
-    '@media(prefers-color-scheme: dark)': {
+    [mediaQueries.prefersColorsSchemeDark]: {
       color: colors.lighter,
     },
     color: colors.darkest,

@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../constants/colors';
+import { mediaQueries } from '../constants/cssSelectors';
 
 
 const StyledNavLink = styled(NavLink)({
@@ -10,7 +11,7 @@ const StyledNavLink = styled(NavLink)({
     '&:hover': {
         color: colors.darkest,
     },
-    '@media(prefers-color-scheme: dark)': {
+    [mediaQueries.prefersColorsSchemeDark]: {
         '&.active': {
             color: colors.lightest,
         },
