@@ -28,10 +28,10 @@ export const carouselStyle = {
  * 
  * #### Example:
  * 
- *     const className = '.hero';
- *     const timeout = 7000;
- * 
- *     useHeroCarousel({ className, timeout });
+ *     useHeroCarousel({ 
+ *       className: 'hero',
+ *       timeout: 7000,
+ *     });
  * 
  * @param className `className` for the elements to target
  * @param timeout Time to display each item in milliseconds
@@ -39,7 +39,7 @@ export const carouselStyle = {
 export function useHeroCarousel({ className, timeout }: Props) {
   const [carouselIndex, setCarouselIndex] = useState(0);
 
-  const elements = document.querySelectorAll(className);
+  const elements = document.querySelectorAll(`.${className}`);
 
   const handleUpdateCarousel = () => {
     if (carouselIndex === elements.length - 1) {

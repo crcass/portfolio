@@ -3,7 +3,7 @@ import LatestProjects from '../../components/LatestProjects';
 import projects from '../../data/projectData';
 import { useHeroCarousel } from '../../hooks/useHeroCarousel';
 import useScrollToTop from '../../hooks/useScrollToTop';
-import HeroWithLink from './HeroWithLink';
+import HeroWithLink, { className } from './HeroWithLink';
 import { Div, HeroBackground, RelativeWrapper, Wrapper } from './styles';
 
 const latestProjects = projects.filter((project, i) => i < 4);
@@ -18,7 +18,6 @@ const renderHeroImages = () => (
   ))
 );
 
-const className = '.hero';
 const timeout = 7000;
 
 const Home = () => {

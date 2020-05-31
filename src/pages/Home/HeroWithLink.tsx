@@ -9,8 +9,10 @@ interface HeroWithLinkProps {
   project: Project;
 }
 
+export const className = 'hero';
+
 const HeroWithLink = ({ isInitialVisible, project }: HeroWithLinkProps) => (
-  <HeroWrapper className={`hero ${isInitialVisible ? carouselClassNames.visible : carouselClassNames.hidden}`}>
+  <HeroWrapper className={`${className} ${isInitialVisible ? carouselClassNames.visible : carouselClassNames.hidden}`}>
     <Link to={`/projects/${project.id}`}>
       <HeroBackground
         alt={project.title}
