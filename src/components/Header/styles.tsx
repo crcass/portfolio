@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
 import { cssSelectors, mediaQueries } from '../../constants/cssSelectors';
+import { Name } from '../../constants/types';
+
+interface HeaderLogoProps {
+  name: Name;
+}
 
 export const HeaderContainer = styled.div({
   display: 'flex',
@@ -14,8 +19,10 @@ export const HeaderLogo = styled.h1({
   color: colors.black,
   display: 'flex',
   fontSize: '48px',
-},
-  `
+}, ({ name }: HeaderLogoProps) => {
+  const fullName = `${name.firstName} ${name.lastName}`;
+  return (
+    `
 &:after {
   content: '';
   color: ${colors.white};
@@ -26,7 +33,7 @@ export const HeaderLogo = styled.h1({
 }
 
 &:hover:after {
-  content: 'chris cass';
+  content: '${fullName.toLowerCase()}';
   color: ${colors.medium};
   margin: 8px;
 }
@@ -38,7 +45,8 @@ export const HeaderLogo = styled.h1({
     color: ${colors.black};
   }
 }
-`);
+`)
+});
 export const Header = styled.header({
   [mediaQueries.prefersColorsSchemeDark]: {
     backgroundColor: colors.black,
