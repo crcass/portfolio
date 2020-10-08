@@ -41,6 +41,8 @@ const Image: React.FC<Props> = props => {
 
   return (
     <ImageContainer
+    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+    // @ts-ignore
       imageHeight={props.imageHeight}
       marginRight={props.marginRight}
     >
@@ -53,6 +55,8 @@ const Image: React.FC<Props> = props => {
 
       <LoadedImage
         alt={props.alt}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // @ts-ignore
         hasLoaded={hasLoaded}
         height={props.imageHeight}
         onLoad={handleLoad}

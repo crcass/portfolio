@@ -5,7 +5,6 @@ export function useDidMount() {
   useEffect(() => {
     setDidMount(true);
 
-    return () => setDidMount(false);
   }, []);
 
   return { didMount };
