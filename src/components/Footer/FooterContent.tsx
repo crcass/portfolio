@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { ROUTES } from '../../constants/routes';
 import { Name } from '../../constants/types';
 import { footerData } from '../../data/footerData';
@@ -12,7 +12,7 @@ interface Props {
 
 const separatorMarginBottom = 32;
 
-const FooterContent: React.FC<Props> = ({ name }) => (
+const FooterContent: FC<Props> = ({ name }) => (
   <FooterContainer>
     <Separator marginBottom={separatorMarginBottom} />
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useParams } from 'react-router-dom';
 import LatestProjects from '../../components/LatestProjects';
 import projects, { ProjectId } from '../../data/projectData';
@@ -11,7 +11,7 @@ interface Params {
   id: ProjectId;
 }
 
-const Project = () => {
+const Project: FC = () => {
   const { id } = useParams<Params>();
   const selectedProject = projects.find(project => project.id === id);
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import InfoCard from '../../components/InfoCard';
 import { InfoCardContainer, RowWrapper } from '../../components/InfoCard/styles';
 import { ContactInfoLink } from './styles';
@@ -11,13 +11,13 @@ interface Props {
   secondLinkUrl: string;
 }
 
-const ContactRow = ({
+const ContactRow: FC<Props> = ({
   firstLinkTitle,
   firstLinkUrl,
   rightParagraph,
   secondLinkTitle,
   secondLinkUrl,
-}: Props) => (
+}) => (
     <RowWrapper>
       <InfoCardContainer>
         <ContactInfoLink

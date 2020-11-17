@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Project } from '../../data/projectData';
 import ProjectGridItem from './ProjectGridItem';
 import { GridContainer } from './styles';
@@ -7,7 +7,7 @@ interface Props {
   projects: Project[];
 }
 
-const ProjectGrid = ({ projects }: Props) => (
+const ProjectGrid: FC<Props> = ({ projects }) => (
   <GridContainer>
     {projects.map(project => (
       <ProjectGridItem

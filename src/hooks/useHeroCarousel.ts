@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import useInterval from "./useInterval";
+import { useEffect, useState } from 'react';
+import useInterval from './useInterval';
 
 interface Props {
   className: string;

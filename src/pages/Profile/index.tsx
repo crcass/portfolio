@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { InfoPageContainer } from '../../components/InfoCard/styles';
 import Separator from '../../components/Separator';
 import { profileData } from '../../data/profileData';
@@ -6,7 +6,7 @@ import useScrollToTop from '../../hooks/useScrollToTop';
 import { pluralize } from '../../utils/string';
 import ProfileRow from './ProfileRow';
 
-const Profile = () => {
+const Profile: FC = () => {
   useScrollToTop();
 
   const pluralizedName = pluralize(profileData.firstName);

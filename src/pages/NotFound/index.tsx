@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
 import { mediaQueries } from '../../constants/cssSelectors';
@@ -14,7 +14,7 @@ const NotFoundHeading = styled.h2({
   color: colors.darkest,
 });
 
-const NotFound = () => (
+const NotFound: FC = () => (
   <NotFoundWrapper>
     <NotFoundHeading>
       Sorry, the page you&apos;re looking for can&apos;t be found

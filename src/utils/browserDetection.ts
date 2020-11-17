@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-ignore */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 export const isAndroid = navigator.userAgent.toLowerCase().indexOf('android') !== -1;
 export const isGoogleBot = navigator.userAgent.toLowerCase().indexOf('googlebot') !== -1;
 // @ts-ignore

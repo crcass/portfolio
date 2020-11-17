@@ -1,5 +1,5 @@
-import { useLocation } from "react-router-dom";
-import projects from "../data/projectData";
+import { useLocation } from 'react-router-dom';
+import projects from '../data/projectData';
 
 const isAvailableRoute = (pathName: string) => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { ProjectLink } from './ProjectLink';
 import { AnchorWrap, Column, Heading, Paragrah, Wrapper } from './styles';
 
@@ -10,7 +10,7 @@ interface Props {
   title: string;
 }
 
-const ProjectDetails: React.FC<Props> = ({
+const ProjectDetails: FC<Props> = ({
   demoUrl,
   description,
   githubUrl,
@@ -45,6 +45,6 @@ const ProjectDetails: React.FC<Props> = ({
         </AnchorWrap>
       </Column>
     </Wrapper>
-  )
+  );
 
 export default ProjectDetails;

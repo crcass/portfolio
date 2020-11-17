@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { colors } from "../../constants/colors";
-import { mediaQueries } from "../../constants/cssSelectors";
+import styled from 'styled-components';
+import { colors } from '../../constants/colors';
+import { mediaQueries } from '../../constants/cssSelectors';
 
 export const InfoPageContainer = styled.div({
   display: 'flex',

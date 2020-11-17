@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
+import React, { FC } from 'react';
+// TODO:
+// eslint-disable-next-line sort-imports
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import StyledFooter from '../components/Footer';
@@ -13,7 +15,7 @@ import Profile from '../pages/Profile';
 import Project from '../pages/Project';
 import Projects from '../pages/Projects';
 
-const Routes = () => {
+const Routes: FC = () => {
   return (
     <Router>
       <Route render={({ location }) => (

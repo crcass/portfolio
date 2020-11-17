@@ -1,19 +1,94 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true
+  'env': {
+    es6: true,
+    'jest/globals': true,
+    node: true,
   },
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
-  },
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    ecmaVersion: 2019,
-    sourceType: 'module'
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
-  plugins: ['react'],
-  rules: {}
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'react-hooks',
+    'jest',
+  ],
+  root: true,
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/no-var-requires': 'off',
+    'arrow-parens': ['error', 'as-needed'],
+    'comma-dangle': ['error', {
+      'arrays': 'always-multiline',
+      'exports': 'always-multiline',
+      'functions': 'never',
+      'imports': 'always-multiline',
+      'objects': 'always-multiline',
+    }],
+    curly: 'error',
+    'default-param-last': ['error'],
+    'jsx-quotes': ['error', 'prefer-double'],
+    'max-len': ['error', { code: 120 }],
+    'new-parens': 'error',
+    'newline-before-return': 'error',
+    'no-bitwise': 'error',
+    'no-caller': 'error',
+    'no-console': 'error',
+    'no-debugger': 'error',
+    'no-multi-spaces': 'error',
+    'no-shadow': 'off',
+    'no-use-before-define': 'off',
+    quotes: ['error', 'single', { avoidEscape: true }],
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
+    'react/display-name': 'off',
+    'react/jsx-boolean-value': ['error', 'never'],
+    'react/jsx-closing-bracket-location': 'error',
+    'react/jsx-closing-tag-location': 'error',
+    'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+    'react/jsx-max-props-per-line': ['error', { maximum: 1 }],
+    'react/jsx-sort-props': ['error', { ignoreCase: true }],
+    'react/jsx-tag-spacing': 'error',
+    'react/jsx-wrap-multilines': ['error', {
+      arrow: 'parens-new-line',
+      assignment: 'parens-new-line',
+      condition: 'parens-new-line',
+      declaration: 'parens-new-line',
+      logical: 'parens-new-line',
+      prop: 'parens-new-line',
+      return: 'parens-new-line',
+    }],
+    'react/no-array-index-key': 'error',
+    'react/no-string-refs': 'error',
+    'react/no-unused-prop-types': 'warn',
+    'react/prop-types': 'off',
+    'react/self-closing-comp': 'error',
+    'react/sort-comp': 'error',
+    semi: ['error', 'always'],
+    'sort-imports': ['error', {
+      'ignoreCase': false,
+      'ignoreDeclarationSort': true,
+      'ignoreMemberSort': false,
+      'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single'],
+    }],
+    'sort-keys': 'error',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };

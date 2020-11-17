@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { InfoCardContainer, InfoCardHeader, Paragraph } from './styles';
 
 interface Props {
@@ -7,11 +7,11 @@ interface Props {
   title?: string;
 }
 
-const InfoCard = ({
+const InfoCard: FC<Props> = ({
   largeParagraph,
   paragraph,
   title,
-}: Props) => (
+}) => (
     <InfoCardContainer>
       {title && (
         <InfoCardHeader>

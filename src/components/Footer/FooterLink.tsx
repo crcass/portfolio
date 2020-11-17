@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { colors } from '../../constants/colors';
 import { LinkProps } from '../../constants/types';
 import StyledAnchor from '../StyledAnchor';
 import { FooterColumn } from './styles';
 
-const FooterLink: React.FC<LinkProps> = ({ href, title }) => (
+const FooterLink: FC<LinkProps> = ({ href, title }) => (
   <FooterColumn>
     <StyledAnchor
       darkModeColor={colors.lighter}

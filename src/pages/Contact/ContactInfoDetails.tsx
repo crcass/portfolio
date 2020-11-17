@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Name } from '../../constants/types';
 import { contactLinks } from '../../data/contactData';
 import { pluralize } from '../../utils/string';
@@ -9,7 +9,7 @@ interface Props {
   name: Name;
 }
 
-const ContactInfoDetails: React.FC<Props> = ({ position, name }) => {
+const ContactInfoDetails: FC<Props> = ({ position, name }) => {
   const pluralizedName = pluralize(name.firstName);
 
   const resumeTitle = `${pluralizedName} Resume`;
@@ -35,7 +35,7 @@ const ContactInfoDetails: React.FC<Props> = ({ position, name }) => {
         title={emailTitle}
       />
     </ContactInfoWrapper>
-  )
+  );
 };
 
 export default ContactInfoDetails;

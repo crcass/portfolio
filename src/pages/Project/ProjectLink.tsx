@@ -1,13 +1,13 @@
-import React from "react";
-import StyledAnchor from "../../components/StyledAnchor";
-import { colors } from "../../constants/colors";
-import { LinkProps } from "../../constants/types";
+import React, { FC } from 'react';
+import StyledAnchor from '../../components/StyledAnchor';
+import { colors } from '../../constants/colors';
+import { LinkProps } from '../../constants/types';
 
 const projectLinkStyle = {
   marginRight: 48,
-}
+};
 
-export const ProjectLink: React.FC<LinkProps> = ({ href, title }) => (
+export const ProjectLink: FC<LinkProps> = ({ href, title }) => (
   <StyledAnchor
     darkModeHoverColor={colors.lighter}
     fontColor={colors.dark}

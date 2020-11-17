@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import InfoCard from '../../components/InfoCard';
 import { RowWrapper } from '../../components/InfoCard/styles';
 
@@ -11,14 +11,14 @@ interface Props {
   rightTitle?: string;
 }
 
-const ProfileRow = ({
+const ProfileRow: FC<Props> = ({
   largeLeftParagraph,
   largeRightParagraph,
   leftParagraph,
   leftTitle,
   rightParagraph,
   rightTitle,
-}: Props) => (
+}) => (
     <RowWrapper>
       <InfoCard
         largeParagraph={largeLeftParagraph}

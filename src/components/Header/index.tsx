@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { withRouter } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes';
 import { Name } from '../../constants/types';
@@ -8,7 +8,7 @@ import { getInitials } from '../../utils/string';
 import NavList from './NavList';
 import { Header, HeaderContainer, HeaderLogo, NavContainer, StyledLink } from './styles';
 
-const StyledHeader = () => {
+const StyledHeader: FC = () => {
   useDisplayTitle();
   const name: Name = {
     firstName: profileData.firstName,

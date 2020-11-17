@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { InfoPageContainer } from '../../components/InfoCard/styles';
 import Separator from '../../components/Separator';
 import { Name } from '../../constants/types';
@@ -9,7 +9,7 @@ import { pluralize } from '../../utils/string';
 import ContactDetailsRow from './ContactDetailsRow';
 import ContactRow from './ContactRow';
 
-const Contact = () => {
+const Contact: FC = () => {
   useScrollToTop();
 
   const name: Name = {

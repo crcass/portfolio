@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { ROUTES } from '../../constants/routes';
 import StyledNavLink from '../StyledNavLink';
 import { NavListItem, NavUL } from './styles';
@@ -14,7 +14,7 @@ const navListItems = [{
   title: 'Contact',
 }];
 
-const NavList = () => (
+const NavList: FC = () => (
   <NavUL>
     {navListItems.map(navListItem => (
       <NavListItem key={navListItem.title}>

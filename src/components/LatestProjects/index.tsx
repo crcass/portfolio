@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import projects from '../../data/projectData';
 import ProjectGrid from '../ProjectGrid';
 import { HeaderText, HeaderWrapper, LatestProjectsContainer } from './styles';
@@ -9,7 +9,7 @@ interface Props {
 
 const latestProjects = projects.filter(project => project.featured);
 
-const LatestProjects = ({ withHeader }: Props) => (
+const LatestProjects: FC<Props> = ({ withHeader }) => (
   <LatestProjectsContainer>
     {withHeader && (
       <HeaderWrapper>

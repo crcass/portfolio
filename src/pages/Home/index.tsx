@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import LatestProjects from '../../components/LatestProjects';
 import projects from '../../data/projectData';
 import { useHeroCarousel } from '../../hooks/useHeroCarousel';
@@ -20,7 +20,7 @@ const renderHeroImages = () => (
 
 const timeout = 7000;
 
-const Home = () => {
+const Home: FC = () => {
   useScrollToTop();
 
   useHeroCarousel({ className, timeout });

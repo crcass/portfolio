@@ -21,7 +21,8 @@ export const HeaderLogo = styled.h1({
   fontSize: '48px',
 }, ({ name }: HeaderLogoProps) => {
   const fullName = `${name.firstName} ${name.lastName}`;
-  return (
+  
+return (
     `
 &:after {
   content: '';
@@ -45,7 +46,7 @@ export const HeaderLogo = styled.h1({
     color: ${colors.black};
   }
 }
-`)
+`);
 });
 export const Header = styled.header({
   [mediaQueries.prefersColorsSchemeDark]: {

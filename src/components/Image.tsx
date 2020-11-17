@@ -11,18 +11,18 @@ interface Props {
 }
 
 const blurTimeout = 300;
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const ImageContainer = styled.div((props: Props) => ({
   display: 'flex',
   marginRight: props.marginRight ? `${props.marginRight}px` : undefined,
-  overflow: "hidden",
+  overflow: 'hidden',
   position: 'relative',
 }));
 const Thumbnail = styled.img({
   filter: 'blur(20px)',
 });
-// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const LoadedImage = styled.img((props: { hasLoaded: boolean }) => ({
   bottom: 0,
@@ -41,8 +41,8 @@ const Image: React.FC<Props> = props => {
 
   return (
     <ImageContainer
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       imageHeight={props.imageHeight}
       marginRight={props.marginRight}
     >
@@ -55,7 +55,7 @@ const Image: React.FC<Props> = props => {
 
       <LoadedImage
         alt={props.alt}
-        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         hasLoaded={hasLoaded}
         height={props.imageHeight}

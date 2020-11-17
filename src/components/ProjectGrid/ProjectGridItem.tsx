@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ROUTES } from '../../constants/routes';
 import { ProjectId } from '../../data/projectData';
-import { GridItemContainer, GridItemImage, GridItemLink, GridItemOverlay, GridItemTextWrapper, GridItemTitle, GridItemWrapper } from './styles';
+import {
+  GridItemContainer,
+  GridItemImage,
+  GridItemLink,
+  GridItemOverlay,
+  GridItemTextWrapper,
+  GridItemTitle,
+  // TODO:
+  // eslint-disable-next-line comma-dangle
+  GridItemWrapper
+} from './styles';
 
 interface Props {
   id: ProjectId;
@@ -10,7 +20,9 @@ interface Props {
   title: string;
 }
 
-const ProjectGridItem = ({ id, imagePath, title }: Props) => {
+const ProjectGridItem: FC<Props> = ({ id, imagePath, title }) => {
+  // eslint-disable-next-line no-console
+  console.log({imagePath});
   const location = useLocation();
 
   const projectRoute = location.pathname !== ROUTES.PROJECTS ? `/projects/${id}` : id;
