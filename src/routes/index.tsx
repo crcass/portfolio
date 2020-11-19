@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { FC } from 'react';
-// TODO:
-// eslint-disable-next-line sort-imports
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import StyledFooter from '../components/Footer';
 import StyledHeader from '../components/Header';
@@ -26,7 +24,7 @@ const Routes: FC = () => {
             <SwitchTransition>
               <CSSTransition
                 classNames="page"
-                key={location.key}
+                key={location?.key ?? 'initial'}
                 timeout={300}
               >
                 <Switch location={location}>

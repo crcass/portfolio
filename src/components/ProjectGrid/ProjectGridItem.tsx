@@ -9,9 +9,8 @@ import {
   GridItemOverlay,
   GridItemTextWrapper,
   GridItemTitle,
-  // TODO:
-  // eslint-disable-next-line comma-dangle
-  GridItemWrapper
+
+  GridItemWrapper,
 } from './styles';
 
 interface Props {
@@ -22,7 +21,6 @@ interface Props {
 
 const ProjectGridItem: FC<Props> = ({ id, imagePath, title }) => {
   // eslint-disable-next-line no-console
-  console.log({imagePath});
   const location = useLocation();
 
   const projectRoute = location.pathname !== ROUTES.PROJECTS ? `/projects/${id}` : id;
