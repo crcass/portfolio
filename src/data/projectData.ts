@@ -1,4 +1,21 @@
 /* eslint-disable max-len */
+import bamazonJPG from '../assets/images/projects/bamazon.jpg';
+import cfbTriviaJPG from '../assets/images/projects/trivia.jpg';
+import devpoolJPG from '../assets/images/projects/devpool.jpg';
+import edbJPG from '../assets/images/projects/edb.jpg';
+import eplMemoryGameJPG from '../assets/images/projects/eplMemory.jpg';
+import googleBooksJPG from '../assets/images/projects/gbSearch.jpg';
+import hailCliJPG from '../assets/images/projects/hailCLI.jpg';
+import hailJPG from '../assets/images/projects/hail.jpg';
+import linkJPG from '../assets/images/projects/link.jpg';
+import liriJPG from '../assets/images/projects/liri.jpg';
+import portfolioJPG from '../assets/images/projects/portfolio.jpg';
+import rpsJPG from '../assets/images/projects/rps.jpg';
+import signalJPG from '../assets/images/projects/signal.jpg';
+import starfighterJPG from '../assets/images/projects/starfighter.jpg';
+import supersearchJPG from '../assets/images/projects/supersearch.jpg';
+import vNewsJPG from '../assets/images/projects/vNews.jpg';
+
 export type ProjectId =
   'bamazon' |
   'cfb_trivia' |
@@ -27,22 +44,6 @@ export interface Project {
   tech: string;
   title: string;
 }
-import bamazonJPG from '../assets/images/projects/bamazon.jpg';
-import devpoolJPG from '../assets/images/projects/devpool.jpg';
-import edbJPG from '../assets/images/projects/edb.jpg';
-import eplMemoryGameJPG from '../assets/images/projects/eplMemory.jpg';
-import googleBooksJPG from '../assets/images/projects/gbSearch.jpg';
-import hailJPG from '../assets/images/projects/hail.jpg';
-import hailCliJPG from '../assets/images/projects/hailCLI.jpg';
-import linkJPG from '../assets/images/projects/link.jpg';
-import liriJPG from '../assets/images/projects/liri.jpg';
-import portfolioJPG from '../assets/images/projects/portfolio.jpg';
-import rpsJPG from '../assets/images/projects/rps.jpg';
-import signalJPG from '../assets/images/projects/signal.jpg';
-import starfighterJPG from '../assets/images/projects/starfighter.jpg';
-import supersearchJPG from '../assets/images/projects/supersearch.jpg';
-import cfbTriviaJPG from '../assets/images/projects/trivia.jpg';
-import vNewsJPG from '../assets/images/projects/vNews.jpg';
 
 const projects: Project[] = [
   {
